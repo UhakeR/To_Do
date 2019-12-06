@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+{% for todo in object_list %}
+<fieldset class="{% if todo.done %}matrix{% else %}no-matrix{% endif %}">
+    <legend><a class="{% if todo.done %}matrix{% else %}no-matrix{% endif %}" href="{% url 'detail' pk=todo.pk %}">{{ todo.title }}</a></legend>
+    <div class="{% if todo.done %}matrix{% else %}no-matrix{% endif %}">
+      <span>{{ todo.description }}</span>
+      <br>
+      <span>Da fare entro: {{ todo.due_date }}</span>
+    </div>
+</fieldset>
+{% endfor %}
+{% endblock content %}

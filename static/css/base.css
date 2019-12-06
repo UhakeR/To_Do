@@ -1,0 +1,41 @@
+hr {
+    border: 1px dashed limegreen;
+}
+
+body{
+    background-color: black;
+}
+
+fieldset
+{
+  border:1px dashed;
+}
+
+.matrix{ 
+    font-family:Lucida Console, 
+    Courier, Monotype; 
+    font-size:10pt; 
+    color:limegreen; 
+}
+
+button{
+    border: 1px dashed limegreen;
+    background-color: black;
+}
+
+table{
+    border: 1px limegreen dashed;
+}
+
+input{
+    color: limegreen;
+    background-color: black;
+    border: 1px limegreen dashed;
+}
+
+.no-matrix{ 
+    font-family:Lucida Console, 
+    Courier, Monotype; 
+    font-size:10pt; 
+    color: red; 
+}

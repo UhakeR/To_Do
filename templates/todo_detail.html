@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block url %}
+  <a class="matrix" href="{% url 'todo' %}">Home</a>
+{% endblock url %}
+
+
+{% block content %}
+    <fieldset class="{% if todo.done %}matrix{% else %}no-matrix{% endif %}">
+        <legend>{{ todo.title }}</legend>
+        <div>
+          <span>{{ todo.description }}</span>
+          <br>
+          <span>Creato il: {{ todo.date }}</span>
+        </div>
+        <span><a class="{% if todo.done %}matrix{% else %}no-matrix{% endif %}" href="{% url 'edit' todo.pk %}">Edit|</a><a class="{% if todo.done %}matrix{% else %}no-matrix{% endif %}" href="{% url 'delete' todo.pk %}">Delete</a></span>
+    </fieldset>
+{% endblock content %}

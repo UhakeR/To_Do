@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+
+{% block url %}
+  <a class="matrix" href="{% url 'todo' %}">Home</a>
+{% endblock url %}
+
+{% block content %}
+    <h1 class="matrix">New post</h1>
+    <form class="matrix" action="" method="post">
+        {% csrf_token %}
+        <table>
+          {{ form }}
+        </table>
+        <button class="matrix" type="submit">Submit</button>
+    </form>
+{% endblock content %}
